@@ -1,0 +1,31 @@
+##set과 intersection 배움▽
+a, b = map(int, input().split())
+c_set = set(input().rstrip() for _ in range(a))
+d_set = set(input().rstrip() for _ in range(b))
+
+intersection_set = c_set.intersection(d_set)
+result_count = len(intersection_set)
+
+print(result_count)
+for u in sorted(intersection_set):  
+    print(u)
+##멍청코드 ▽
+a, b = map(int, input().split())
+c = []
+d = []
+g = 0
+h = []
+for i in range(a):
+    e = input()
+    c.append(e)
+for _ in range(b):
+    f  = input()
+    d.append(f)
+for k in range(len(c)):
+    if c[k] in d:
+        g += 1
+        h.append(c[k])
+h.sort()
+print(g)
+for u in h:
+    print(u)
